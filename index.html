@@ -3,214 +3,120 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>OOKINI.com｜飲食専門の Webライティング＆LP制作（佐藤明宏）</title>
-<meta name="description" content="飲食業界20年・最大35店舗を統括した現場目線で、来店につながる飲食店のLP制作とグルメ記事ライティングを手がけます。">
+<title>OOKINI.com｜飲食専門のWebライティング＆LP制作</title>
+<meta name="description" content="飲食業界歴25年以上・最大35店舗を統括した現場目線で、来店につながる飲食店LPとグルメ記事を制作します。">
 <style>
-:root{
-  --page:#f4efe6;--ink:#1c1916;--sub:#6f665b;--line:#ddd2c4;--soft:#ece4d6;
-  --accent:#b04a26;
-  --serif:"Yu Mincho","Hiragino Mincho ProN",serif;
-  --sans:"Helvetica Neue","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--page);color:var(--ink);font-family:var(--sans);line-height:1.9;overflow-x:hidden;-webkit-font-smoothing:antialiased}
-img{display:block;width:100%;height:100%;object-fit:cover}
-a{color:inherit;text-decoration:none}
-.progress{position:fixed;top:0;left:0;height:2px;width:0;background:var(--accent);z-index:120}
-.head{position:fixed;top:0;left:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:18px clamp(20px,5vw,72px);transition:transform .35s ease;mix-blend-mode:difference;color:#fff}
-.head.hide{transform:translateY(-110%)}
-.head .brand{font-weight:700;letter-spacing:.04em;font-size:15px}
-.head nav{display:flex;gap:22px;font-size:11px;letter-spacing:.18em;text-transform:uppercase}
-@media(max-width:720px){.head nav{display:none}}
-.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,72px)}
-/* hero */
-.hero{min-height:96svh;display:flex;flex-direction:column;justify-content:center;padding:120px 0 70px}
-.eyebrow{display:flex;align-items:center;gap:12px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--sub);margin-bottom:30px}
-.eyebrow:before{content:"";width:36px;height:1px;background:var(--accent)}
-.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(40px,7.6vw,104px);line-height:1.12;letter-spacing:.01em}
-.hero h1 .a{color:var(--accent)}
-.hero .lead{max-width:600px;margin-top:34px;font-size:clamp(15px,1.4vw,18px);color:var(--sub)}
-.hero .meta{margin-top:40px;display:flex;gap:28px;flex-wrap:wrap;font-size:12px;letter-spacing:.12em;color:var(--sub)}
-.hero .meta b{color:var(--ink);font-weight:500}
-/* section frame */
-.sec{padding:clamp(70px,10vw,150px) 0}
-.sec-label{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
-.sec-title{font-family:var(--serif);font-weight:500;font-size:clamp(26px,4vw,46px);line-height:1.3;letter-spacing:.01em;margin-bottom:8px}
-.sec-sub{color:var(--sub);font-size:14px}
-/* approach */
-.appr{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:2px;background:var(--line);border:1px solid var(--line);margin-top:40px}
-.appr .it{background:var(--page);padding:34px clamp(20px,2vw,32px)}
-.appr .n{font-family:var(--serif);font-size:34px;color:var(--accent);line-height:1}
-.appr .t{font-weight:500;margin:14px 0 8px;font-size:16px}
-.appr .d{font-size:13.5px;color:var(--sub)}
-/* work posters */
-.posters{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:clamp(16px,2vw,26px);margin-top:46px}
-.poster{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--soft);display:block}
-.poster img{position:absolute;inset:-4%;width:108%;height:108%;transition:transform 1s cubic-bezier(.2,.7,.2,1);will-change:transform}
-.poster:hover img{transform:scale(1.05)}
-.poster:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,16,12,.15) 0%,rgba(20,16,12,0) 32%,rgba(20,16,12,.12) 55%,rgba(20,16,12,.86) 100%)}
-.poster .meta{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;justify-content:space-between;padding:20px;color:#fff}
-.poster .cat{font-size:11px;letter-spacing:.2em;text-transform:uppercase;text-shadow:0 1px 8px rgba(0,0,0,.5)}
-.poster .badge{align-self:flex-start;font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:5px 11px;border:1px solid rgba(255,255,255,.6);border-radius:999px;backdrop-filter:blur(4px)}
-.poster .badge.live{background:var(--accent);border-color:var(--accent)}
-.poster .btm h3{font-family:var(--serif);font-weight:500;font-size:clamp(22px,2.2vw,30px);line-height:1.2;text-shadow:0 2px 14px rgba(0,0,0,.5)}
-.poster .role{margin-top:8px;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;opacity:.92}
-.poster .go{margin-top:10px;font-size:12px;display:inline-flex;gap:6px;align-items:center}
-.note{font-size:12px;color:var(--sub);margin-top:18px}
-/* writing */
-.writing{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:44px}
-.art{background:var(--page);padding:30px clamp(20px,2vw,34px);display:flex;flex-direction:column;gap:8px;transition:background .3s}
-.art:hover{background:var(--soft)}
-.art .k{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
-.art h3{font-family:var(--serif);font-weight:500;font-size:22px;line-height:1.3}
-.art p{font-size:13.5px;color:var(--sub);flex:1}
-.art .go{font-size:12px;letter-spacing:.08em;color:var(--accent)}
-/* contact */
-.contact{text-align:center;padding:clamp(80px,12vw,150px) 20px}
-.contact h2{font-family:var(--serif);font-weight:500;font-size:clamp(30px,5vw,60px);line-height:1.3}
-.contact p{color:var(--sub);margin:16px auto 30px;max-width:34ch;font-size:14px}
-.btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.btn{border:1px solid var(--ink);padding:14px 30px;font-size:13px;letter-spacing:.08em;border-radius:999px;transition:.25s}
-.btn:hover{background:var(--ink);color:var(--page)}
-.btn.fill{background:var(--accent);border-color:var(--accent);color:#fff}
-.btn.fill:hover{background:var(--ink);border-color:var(--ink)}
-footer{border-top:1px solid var(--line);padding:30px clamp(20px,5vw,72px);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:11px;letter-spacing:.1em;color:var(--sub)}
-.reveal{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
-.reveal.in{opacity:1;transform:none}
-.reveal[data-d="1"]{transition-delay:.1s}.reveal[data-d="2"]{transition-delay:.2s}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}.poster img{position:static;inset:auto;width:100%;height:100%}}
+:root{--white:#fff;--ink:#111;--gray:#f0f0ee;--line:#d9d9d5;--muted:#666;--accent:#d9552f;--sans:"Helvetica Neue","Hiragino Kaku Gothic ProN","Yu Gothic",Arial,sans-serif;--serif:"Yu Mincho","Hiragino Mincho ProN",serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--white);color:var(--ink);font-family:var(--sans);line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}img{display:block;width:100%;height:100%;object-fit:cover}a{color:inherit;text-decoration:none}button{font:inherit}
+.progress{position:fixed;z-index:200;left:0;top:0;width:0;height:3px;background:var(--accent)}
+.header{position:fixed;z-index:100;left:0;right:0;top:0;height:72px;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);display:grid;grid-template-columns:240px 1fr 176px;border-bottom:1px solid var(--line);transition:transform .35s}.header.is-hidden{transform:translateY(-105%)}
+.brand{display:flex;align-items:center;padding:0 28px;font-size:18px;font-weight:900;letter-spacing:-.04em;border-right:1px solid var(--line)}.brand:before{content:"";width:17px;height:17px;margin-right:9px;background:linear-gradient(90deg,var(--ink) 0 35%,transparent 35% 48%,var(--ink) 48% 100%);clip-path:polygon(0 0,100% 0,100% 27%,28% 27%,28% 45%,100% 45%,100% 72%,28% 72%,28% 100%,0 100%)}
+.nav{display:flex;align-items:center;padding:0 28px;gap:32px;font-size:11px;letter-spacing:.1em}.nav a{position:relative}.nav a:after{content:"";position:absolute;left:0;right:100%;bottom:-5px;border-bottom:1px solid;transition:right .25s}.nav a:hover:after{right:0}
+.contact-link{display:flex;align-items:center;justify-content:center;background:var(--ink);color:#fff;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.shell{width:min(1120px,calc(100% - 40px));margin-inline:auto}
+.hero{min-height:100svh;padding:124px 0 0;border-bottom:1px solid var(--line)}.hero-intro{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(270px,.6fr);gap:clamp(36px,7vw,110px);align-items:end;margin-bottom:46px}
+.hero-label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin:0 0 22px}.hero h1{font-size:clamp(46px,8.2vw,118px);line-height:.82;letter-spacing:-.075em;margin:0;font-weight:300}.hero h1 strong{display:block;font-weight:900}.hero-copy{padding-bottom:4px}.hero-copy h2{font-family:var(--serif);font-weight:500;font-size:clamp(25px,3vw,42px);line-height:1.45;margin:0 0 22px}.hero-copy p{font-size:13px;color:var(--muted);margin:0;max-width:38em}.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);margin-top:32px;border:1px solid var(--line)}.hero-stats div{background:#fff;padding:14px}.hero-stats b{display:block;font-size:22px;line-height:1}.hero-stats span{font-size:9px;letter-spacing:.08em;color:var(--muted)}
+.hero-reel{position:relative;height:43svh;min-height:330px;overflow:hidden;background:var(--ink)}.hero-track{display:grid;grid-template-columns:repeat(3,1fr);height:100%;width:108%;margin-left:-4%;animation:reelBreath 12s ease-in-out infinite alternate}.hero-frame{position:relative;overflow:hidden;border-right:3px solid #fff;margin:0}.hero-frame img{filter:saturate(.82) contrast(1.04);transition:filter .35s}.hero-frame:hover img{filter:saturate(1) contrast(1)}.hero-frame span{position:absolute;left:14px;top:12px;color:#fff;font-size:9px;letter-spacing:.16em;text-shadow:0 1px 8px #000}.hero-caption{display:flex;justify-content:space-between;align-items:flex-end;gap:clamp(18px,4vw,48px);padding:clamp(34px,5.5vw,66px) 0 clamp(10px,2.5vw,28px)}.hero-caption-text{margin:0;font-family:var(--serif);font-size:clamp(30px,5vw,60px);font-weight:500;line-height:1.3;letter-spacing:.03em;word-break:keep-all}.hero-caption i{font-style:normal;color:var(--accent)}.hero-caption-tag{flex:none;writing-mode:vertical-rl;font-size:10px;letter-spacing:.22em;color:var(--muted);white-space:nowrap;padding-bottom:6px}.hero-side{position:absolute;z-index:4;right:14px;top:18px;color:#fff;writing-mode:vertical-rl;font-size:9px;letter-spacing:.22em;text-shadow:0 1px 8px #000}@keyframes reelBreath{to{transform:translateX(1.4%) scale(1.015)}}
+.hero-copy h2,.section-ja,.work-name,.work-summary,.article h3,.method-row h3,.cta-inner p{word-break:keep-all}
+.section{padding:clamp(86px,11vw,150px) 0}.section-head{display:grid;grid-template-columns:190px 1fr;align-items:end;gap:34px;margin-bottom:48px}.section-index{font-size:11px;letter-spacing:.16em}.section-title{margin:0;font-size:clamp(54px,7vw,94px);line-height:.9;letter-spacing:-.055em;font-weight:300}.section-title strong{font-weight:900}.section-ja{display:block;font-size:14px;font-weight:500;letter-spacing:.06em;margin-top:18px}
+.works{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}.work{display:block;min-width:0}.work-visual{position:relative;aspect-ratio:1.28/1;background:var(--gray);overflow:hidden}.work-visual:before{content:attr(data-no);position:absolute;z-index:0;left:-.06em;bottom:-.26em;color:#fff;font-size:clamp(130px,16vw,240px);font-weight:900;line-height:1;letter-spacing:-.1em}.work img{position:relative;z-index:1;width:82%;height:100%;margin-left:18%;object-position:center;filter:saturate(.9);transition:transform .7s cubic-bezier(.2,.7,.2,1),width .7s,margin .7s}.work:hover img{transform:scale(1.035);width:100%;margin-left:0}.work-status{position:absolute;z-index:3;left:0;top:0;padding:7px 11px;background:#fff;font-size:9px;letter-spacing:.12em;text-transform:uppercase}.work-status.live{background:var(--accent);color:#fff}.work-info{padding-top:16px}.work-name{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:0 0 10px;font-family:var(--serif);font-size:20px;font-weight:600;line-height:1.35}.work-name small{font-family:var(--sans);font-size:9px;font-weight:400;letter-spacing:.12em;white-space:nowrap}.role{display:inline;padding:4px 8px;background:var(--ink);color:#fff;font-size:10px;line-height:2.1;letter-spacing:.06em;box-decoration-break:clone;-webkit-box-decoration-break:clone}.work-summary{margin:11px 0 0;font-size:12px;color:var(--muted)}
+.notice{margin-top:38px;padding-top:18px;border-top:1px solid var(--line);font-size:11px;color:var(--muted)}
+.method{background:var(--ink);color:#fff}.method .section-head{margin-bottom:60px}.method .section-title{color:#fff}.method-list{border-top:1px solid #555}.method-row{display:grid;grid-template-columns:100px 1fr minmax(240px,.55fr);gap:28px;align-items:center;padding:30px 0;border-bottom:1px solid #555}.method-no{font-size:12px;letter-spacing:.16em;color:#aaa}.method-row h3{font-family:var(--serif);font-size:clamp(24px,3vw,38px);font-weight:500;margin:0}.method-row p{font-size:15.6px;color:#bbb;margin:0}.method-row:hover h3{color:#ef8a68}
+.profile{display:grid;grid-template-columns:minmax(300px,.7fr) 1fr;gap:clamp(40px,8vw,120px);align-items:start}.profile-mark{position:sticky;top:110px;aspect-ratio:1;background:var(--gray);display:grid;place-items:center;overflow:hidden}.profile-mark span{font-size:clamp(100px,17vw,240px);font-weight:900;letter-spacing:-.12em;transform:translateX(-.06em)}.profile-mark:after{content:"FOOD × WEB";position:absolute;left:18px;bottom:16px;background:var(--ink);color:#fff;padding:6px 10px;font-size:10px;letter-spacing:.15em}.profile h2{font-size:clamp(44px,6vw,82px);line-height:.95;letter-spacing:-.06em;font-weight:300;margin:0 0 22px}.profile h2 strong{font-weight:900}.profile .name{font-family:var(--serif);font-size:24px;margin:0 0 24px}.profile .bio{font-size:14px;color:var(--muted);max-width:47em}.career{margin-top:44px;border-top:1px solid var(--line)}.career-row{display:grid;grid-template-columns:130px 1fr;gap:24px;padding:18px 0;border-bottom:1px solid var(--line)}.career-row b{font-size:11px;letter-spacing:.12em}.career-row span{font-size:13px}
+.writing{background:var(--gray)}.article-list{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink);border-left:1px solid var(--ink)}.article{min-height:270px;padding:30px;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);display:flex;flex-direction:column;justify-content:space-between;transition:background .25s,color .25s}.article:hover{background:var(--ink);color:#fff}.article small{font-size:10px;letter-spacing:.16em}.article h3{font-family:var(--serif);font-size:clamp(25px,3vw,38px);font-weight:500;line-height:1.35;margin:36px 0 20px}.article p{font-size:12px;margin:0;opacity:.7}.article .arrow{align-self:flex-end;font-size:24px}
+.cta-section{padding:clamp(90px,13vw,180px) 0}.cta-inner{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}.cta-inner h2{font-size:clamp(48px,7vw,96px);line-height:1;letter-spacing:-.06em;font-weight:300;margin:0}.cta-inner h2 strong{font-weight:900}.cta-inner p{font-size:13px;color:var(--muted);margin:24px 0 0}.cta-buttons{display:grid;gap:8px}.cta-button{min-width:210px;padding:15px 18px;border:1px solid var(--ink);display:flex;justify-content:space-between;font-size:12px;letter-spacing:.08em}.cta-button.primary{background:var(--ink);color:#fff}.cta-button:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+footer{padding:27px 28px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;font-size:10px;letter-spacing:.1em}
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .75s ease,transform .85s cubic-bezier(.2,.7,.2,1)}.reveal.in{opacity:1;transform:none}.reveal[data-delay="1"]{transition-delay:.1s}.reveal[data-delay="2"]{transition-delay:.2s}
+@media(max-width:820px){.header{grid-template-columns:1fr 120px;height:64px}.brand{padding:0 18px;border:0}.nav{display:none}.hero{min-height:auto;padding:105px 0 0}.hero-intro{grid-template-columns:1fr;gap:42px;margin-bottom:38px}.hero h1{font-size:clamp(34px,13vw,62px)}.hero-reel{height:54svh}.hero-track{grid-template-columns:1fr 1fr;width:150%;margin-left:-25%}.hero-frame:nth-child(3){display:none}.hero-caption{padding:clamp(28px,7vw,44px) 0 14px;gap:14px}.hero-caption-text{font-size:clamp(26px,7vw,42px)}.hero-caption-tag{font-size:9px}.section-head{grid-template-columns:1fr;gap:10px}.works{grid-template-columns:1fr}.work-visual{aspect-ratio:1.45/1}.work-visual:before{font-size:55vw}.work img{width:78%;margin-left:22%}.method-row{grid-template-columns:56px 1fr}.method-row p{grid-column:2}.profile{grid-template-columns:1fr}.profile-mark{position:relative;top:auto;aspect-ratio:1.65/1}.article-list{grid-template-columns:1fr}.cta-inner{grid-template-columns:1fr}.cta-buttons{grid-template-columns:1fr 1fr}.cta-button{min-width:0}footer{flex-direction:column}}
+@media(max-width:480px){.shell{width:calc(100% - 28px)}.contact-link{font-size:10px}.section{padding:80px 0}.section-title{font-size:52px}.work-visual{aspect-ratio:1.18/1}.method-row{gap:14px}.profile-mark{aspect-ratio:1.25/1}.article{min-height:230px;padding:22px}.cta-buttons{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}.work img{transition:none}.hero-track{transform:none}}
 </style>
 </head>
 <body>
-<div class="progress"></div>
-<header class="head">
+<div class="progress" aria-hidden="true"></div>
+<header class="header">
   <a class="brand" href="#top">OOKINI.com</a>
-  <nav><a href="#work">Work</a><a href="#writing">Writing</a><a href="#contact">Contact</a></nav>
+  <nav class="nav" aria-label="メインナビゲーション"><a href="#work">制作実績</a><a href="#method">制作姿勢</a><a href="#profile">プロフィール</a><a href="#writing">文章実績</a></nav>
+  <a class="contact-link" href="#contact">Contact</a>
 </header>
 
 <main id="top">
-  <section class="hero wrap">
-    <p class="eyebrow reveal">Food-focused Web writing &amp; LP design</p>
-    <h1 class="reveal" data-d="1">食べたくなる、から<br><span class="a">逆算する。</span></h1>
-    <p class="lead reveal" data-d="2">飲食専門の Webライティング＆LP制作。<br>飲食業界20年・最大35店舗を統括した現場目線で、<br>「お客様が来店を決める理由」から一枚をつくります。</p>
-    <div class="meta reveal" data-d="2"><span><b>佐藤明宏</b> ／ OOKINI.com</span><span>飲食店LP ・ グルメ記事 ・ note</span></div>
-  </section>
-
-  <section class="sec wrap" id="work">
-    <p class="sec-label reveal">Selected food experiences</p>
-    <h2 class="sec-title reveal">食べたくなる、から逆算したLP。</h2>
-    <p class="sec-sub reveal">クリックで、動きのある実物が開きます。</p>
-    <div class="posters">
-
-      <a class="poster reveal" href="lp/yakitori.html" target="_blank" rel="noopener">
-        <img src="lp/assets/yakitori-hero.png" alt="炭火焼鳥 鳥八 LP" data-parallax>
-        <div class="meta">
-          <span class="badge">Concept</span>
-          <div class="btm">
-            <p class="cat">01 ／ Night ・ Yakitori</p>
-            <h3>炭火焼鳥 鳥八</h3>
-            <p class="role">Strategy ／ Copy ／ Art Direction ／ Front-end</p>
-            <span class="go">View LP ↗</span>
-          </div>
-        </div>
-      </a>
-
-      <a class="poster reveal" data-d="1" href="lp/mori.html" target="_blank" rel="noopener">
-        <img src="lp/assets/mori-hero.png" alt="plant-based cafe mori LP" data-parallax>
-        <div class="meta">
-          <span class="badge">Concept</span>
-          <div class="btm">
-            <p class="cat">02 ／ Daytime ・ Plant-based</p>
-            <h3>plant-based cafe mori</h3>
-            <p class="role">Concept ／ Copy ／ Design ／ Front-end</p>
-            <span class="go">View LP ↗</span>
-          </div>
-        </div>
-      </a>
-
-      <a class="poster reveal" data-d="2" href="lp/mercy.html" target="_blank" rel="noopener">
-        <img src="lp/assets/mercy-hero.png" alt="MERCY Vegan Ramen LP" data-parallax>
-        <div class="meta">
-          <span class="badge live">In Production</span>
-          <div class="btm">
-            <p class="cat">03 ／ Franchise ・ Vegan Ramen</p>
-            <h3>MERCY Vegan Ramen</h3>
-            <p class="role">Design ／ Copy ／ CV Flow ／ Multilingual</p>
-            <span class="go">View LP ↗</span>
-          </div>
-        </div>
-      </a>
-
+  <section class="hero">
+    <div class="hero-intro shell">
+      <div><p class="hero-label reveal">Food-focused Web Writing &amp; LP Design</p><h1 class="reveal" data-delay="1">FOOD<strong>PORTFOLIO</strong></h1></div>
+      <div class="hero-copy reveal" data-delay="2"><h2>現場を知る人が、<br>画面をつくる。</h2><p>飲食業界歴25年以上・最大35店舗を統括した現場目線で、<br>「お客様が来店を決める理由」からLPと文章をつくります。</p><div class="hero-stats"><div><b>25年+</b><span>飲食業界経験</span></div><div><b>35店舗</b><span>最大統括店舗数</span></div></div></div>
     </div>
-    <p class="note reveal">※ Conceptは構成・コピー・デザインをお見せする試作。MERCY Vegan Ramenは受注・制作中で、掲載内容は提案段階のため変更の可能性があります。写真は方向確認用で、本番は実店舗撮影に差し替えます。</p>
+    <div class="hero-reel">
+      <div class="hero-track">
+        <figure class="hero-frame"><img src="lp/assets/yakitori-hero.png" alt="炭火で焼鳥を焼く職人の手元"><span>YAKITORI / NIGHT</span></figure>
+        <figure class="hero-frame"><img src="lp/assets/mori-hero.png" alt="ソイカツと季節野菜のカフェプレート"><span>PLANT-BASED / DAY</span></figure>
+        <figure class="hero-frame"><img src="lp/assets/mercy-hero.png" alt="MERCYの植物性ラーメン"><span>VEGAN / FRANCHISE</span></figure>
+      </div>
+      <span class="hero-side">STRATEGY / COPY / DESIGN / FRONT-END</span>
+    </div>
+    <div class="hero-caption shell reveal"><p class="hero-caption-text">食べたくなる、から<i>逆算する。</i></p><span class="hero-caption-tag">CONCEPT TO RESERVATION</span></div>
   </section>
 
-  <section class="sec wrap">
-    <p class="sec-label reveal">Approach</p>
-    <h2 class="sec-title reveal">見た目より、来店動機から。</h2>
-    <div class="appr">
-      <div class="it reveal"><div class="n">01</div><div class="t">現場を知る書き手</div><div class="d">飲食業界20年。エリアマネージャーとして最大35店舗を統括した経験から、何が来店動機になるかを書きます。</div></div>
-      <div class="it reveal" data-d="1"><div class="n">02</div><div class="t">来店につなぐ設計</div><div class="d">見た目だけでなく、来店・予約・登録につながる構成とコピーを、CVR視点で組みます。</div></div>
-      <div class="it reveal" data-d="2"><div class="n">03</div><div class="t">速さと丁寧さ</div><div class="d">AIも活用して速く。ただし丸投げにせず、現場の体験と一次情報で仕上げます。</div></div>
+  <section class="section shell" id="work">
+    <div class="section-head"><span class="section-index reveal">01 / SELECTED WORKS</span><h2 class="section-title reveal">WORK<strong>S</strong><span class="section-ja">制作実績・サンプル</span></h2></div>
+    <div class="works">
+      <a class="work reveal" href="lp/yakitori.html" target="_blank" rel="noopener">
+        <div class="work-visual" data-no="01"><img src="lp/assets/yakitori-hero.png" alt="炭火焼鳥 鳥八 LP"><span class="work-status">Concept work</span></div>
+        <div class="work-info"><h3 class="work-name">炭火焼鳥 鳥八 <small>Yakitori</small></h3><span class="role">戦略｜コピー｜アートディレクション｜実装</span><p class="work-summary">焼き台の熱と手仕事から、予約したくなる夜を設計。</p></div>
+      </a>
+      <a class="work reveal" data-delay="1" href="lp/mori.html" target="_blank" rel="noopener">
+        <div class="work-visual" data-no="02"><img src="lp/assets/mori-hero.png" alt="plant-based cafe mori LP"><span class="work-status">Concept work</span></div>
+        <div class="work-info"><h3 class="work-name">plant-based cafe mori <small>Vegan cafe</small></h3><span class="role">コンセプト｜コピー｜デザイン｜実装</span><p class="work-summary">健康訴求より先に、食べたい気持ちと滞在時間を伝える。</p></div>
+      </a>
+      <a class="work reveal" data-delay="2" href="lp/mercy.html" target="_blank" rel="noopener">
+        <div class="work-visual" data-no="03"><img src="lp/assets/mercy-hero.png" alt="MERCY Vegan Factory FC店舗LP"><span class="work-status live">In production</span></div>
+        <div class="work-info"><h3 class="work-name">MERCY Vegan Factory <small>FC / Vegan</small></h3><span class="role">デザイン｜コピー｜CV導線｜多言語</span><p class="work-summary">既存ブランドを守りながら、新しい一杯を自然に追加。</p></div>
+      </a>
+    </div>
+    <p class="notice reveal">Concept workは構成・コピー・デザインを提示する試作です。MERCY案件は提案・制作段階を含みます。写真は方向確認用で、公開時は実店舗撮影への差し替えを前提とします。</p>
+  </section>
+
+  <section class="section method" id="method">
+    <div class="shell">
+      <div class="section-head"><span class="section-index reveal">02 / METHOD</span><h2 class="section-title reveal">HOW I<strong> WORK</strong><span class="section-ja">見た目より、来店動機から。</span></h2></div>
+      <div class="method-list">
+        <article class="method-row reveal"><span class="method-no">01</span><h3>現場を知る書き手</h3><p>飲食業界歴25年以上。数字だけでは見えない、お客様と店側の両方の温度から書きます。</p></article>
+        <article class="method-row reveal"><span class="method-no">02</span><h3>来店につなぐ設計</h3><p>写真映えだけで終わらせず、予約・来店・登録までの心理の順番を組みます。</p></article>
+        <article class="method-row reveal"><span class="method-no">03</span><h3>AIを使い、人が仕上げる</h3><p>制作速度は上げても、食材・言葉・ブランドの違和感は人の目で削ります。</p></article>
+      </div>
     </div>
   </section>
 
-  <section class="sec wrap" id="writing">
-    <p class="sec-label reveal">Writing</p>
-    <h2 class="sec-title reveal">読んで、行きたくなる文章。</h2>
-    <div class="writing">
-      <a class="art reveal" href="articles/飲食店紹介_炭火焼鳥鳥八.html" target="_blank" rel="noopener">
-        <span class="k">Sample ／ 店舗紹介</span>
-        <h3>炭火の前は、特等席。</h3>
-        <p>「行ってみたい」と思わせる飲食店紹介記事のサンプル。</p>
-        <span class="go">記事を読む →</span>
-      </a>
-      <a class="art reveal" data-d="1" href="articles/関西ご当地ラーメン.html" target="_blank" rel="noopener">
-        <span class="k">Sample ／ ご当地グルメ</span>
-        <h3>関西のラーメンは、出汁で語れ。</h3>
-        <p>食べ歩いた体験から書いた、ご当地グルメコラムのサンプル。</p>
-        <span class="go">記事を読む →</span>
-      </a>
+  <section class="section shell" id="profile">
+    <div class="profile">
+      <div class="profile-mark reveal" aria-label="OOKINI.comのタイポグラフィックシンボル"><span>OO</span></div>
+      <div class="reveal"><h2>PRO<strong>FILE</strong></h2><p class="name">佐藤 明宏｜OOKINI.com 代表</p><p class="bio">飲食業界歴25年以上。「牛角」「かつや」「まいどおおきに食堂」などの出店・立地診断を責任者として担当後、ゴーストレストラン業態で西日本最大35店舗を統括するエリアマネージャーを経験。出店から数値管理まで知る立場で、「おいしい」だけでは伝わらない——そんな店舗にとって最適な言葉と画面を組み立てます。</p>
+        <div class="career"><div class="career-row"><b>EXPERIENCE</b><span>飲食業界歴25年以上・西日本最大35店舗を統括</span></div><div class="career-row"><b>SPECIALTY</b><span>飲食店LP、店舗紹介、グルメ記事、集客導線</span></div><div class="career-row"><b>ROLE</b><span>企画、構成、コピー、デザイン、フロントエンド</span></div></div>
+      </div>
     </div>
-    <p class="note reveal">※掲載はサンプル。紙媒体（地域のミニコミ誌）への飲食店取材記事の掲載実績もあります。</p>
   </section>
 
-  <section class="contact" id="contact">
-    <h2 class="reveal">飲食店のLP・記事のご相談。</h2>
-    <p class="reveal">まずはお気軽にDMでどうぞ。<br>レスポンスは早めを心がけています。</p>
-    <div class="btns reveal" data-d="1">
-      <a class="btn fill" href="https://www.instagram.com/ookinifoodcom/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.2"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>Instagram</a>
-      <a class="btn" href="https://lin.ee/QN53ljj" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.5 3 2 6.62 2 11.05c0 3.97 3.55 7.3 8.35 7.93.33.07.77.22.88.5.1.26.07.66.03.92l-.14.84c-.04.25-.2.97.85.53 1.05-.44 5.62-3.31 7.67-5.67h-.01C20.86 14.7 22 13 22 11.05 22 6.62 17.5 3 12 3z"/></svg>LINE</a>
-      <a class="btn" href="https://www.threads.com/@ookinifoodcom" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M12.2 21C6.9 21 4 17.4 4 12s2.9-9 8.2-9c3.6 0 5.9 1.7 6.9 4.4M12.4 21c3.9 0 6.4-2.2 6.4-5 0-2.6-2.1-4-4.7-4-2.2 0-3.7 1.1-3.7 2.9 0 1.5 1.3 2.6 3 2.6 2.6 0 4.2-2.2 4.2-5.6"/></svg>Threads</a>
+  <section class="section writing" id="writing">
+    <div class="shell"><div class="section-head"><span class="section-index reveal">03 / WRITING</span><h2 class="section-title reveal">STOR<strong>IES</strong><span class="section-ja">読んで、行きたくなる文章。</span></h2></div>
+      <div class="article-list"><a class="article reveal" href="articles/飲食店紹介_炭火焼鳥鳥八.html" target="_blank" rel="noopener"><small>店舗紹介記事</small><div><h3>炭火の前は、特等席。</h3><p>「行ってみたい」と思わせる飲食店紹介のサンプル。</p></div><span class="arrow">↗</span></a><a class="article reveal" data-delay="1" href="articles/関西ご当地ラーメン.html" target="_blank" rel="noopener"><small>ご当地グルメ記事</small><div><h3>関西のラーメンは、出汁で語れ。</h3><p>食べ歩いた体験から書いたグルメコラム。</p></div><span class="arrow">↗</span></a></div>
     </div>
   </section>
+
+  <section class="cta-section shell" id="contact"><div class="cta-inner"><div class="reveal"><h2>LET'S<strong> TALK.</strong></h2><p>飲食店のLP・記事のご相談。まずはDMからお気軽にどうぞ。</p></div><div class="cta-buttons reveal" data-delay="1"><a class="cta-button primary" href="https://www.instagram.com/ookinifoodcom/" target="_blank" rel="noopener"><span>Instagram</span><span>↗</span></a><a class="cta-button" href="https://lin.ee/QN53ljj" target="_blank" rel="noopener"><span>LINE</span><span>↗</span></a><a class="cta-button" href="https://www.threads.com/@ookinifoodcom" target="_blank" rel="noopener"><span>Threads</span><span>↗</span></a></div></div></section>
 </main>
 
-<footer>
-  <span>OOKINI.com ／ 佐藤明宏</span>
-  <span>飲食専門 Webライティング＆LP制作</span>
-</footer>
-
+<footer><span>© OOKINI.com / SATO AKIHIRO</span><span>FOOD-FOCUSED WEB WRITING &amp; LP DESIGN</span></footer>
 <script>
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-const prog=document.querySelector('.progress'),head=document.querySelector('.head');
-let lastY=0,tick=false;
-const upd=()=>{
-  const y=scrollY,max=document.documentElement.scrollHeight-innerHeight;
-  if(prog)prog.style.width=(max>0?Math.min(100,y/max*100):0)+'%';
-  if(head){head.classList.toggle('hide',y>lastY&&y>160);lastY=y}
-  if(!reduce)document.querySelectorAll('[data-parallax]').forEach(el=>{const r=el.parentElement.getBoundingClientRect();el.style.transform=`translateY(${(r.top-innerHeight/2)*.03}px)`});
-  tick=false;
-};
-addEventListener('scroll',()=>{if(!tick){requestAnimationFrame(upd);tick=true}},{passive:true});
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.14});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:reduce?'auto':'smooth'})}}));
-upd();
+const progress=document.querySelector('.progress');
+const header=document.querySelector('.header');
+let lastY=0,scheduled=false;
+function update(){const y=scrollY,max=document.documentElement.scrollHeight-innerHeight;progress.style.width=(max>0?Math.min(100,y/max*100):0)+'%';header.classList.toggle('is-hidden',y>lastY&&y>180);lastY=y;scheduled=false}
+addEventListener('scroll',()=>{if(!scheduled){requestAnimationFrame(update);scheduled=true}},{passive:true});
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('in');observer.unobserve(entry.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',event=>{const target=document.querySelector(a.getAttribute('href'));if(target){event.preventDefault();target.scrollIntoView({behavior:reduce?'auto':'smooth'})}}));
+update();
 </script>
 </body>
 </html>
