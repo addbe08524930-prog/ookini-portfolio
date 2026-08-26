@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>食楽居酒屋 沼ちゃんとこ｜制作中LP（OOKINI.com 制作実績）</title>
+<meta name="description" content="京都・西大路駅南口から徒歩約5分。15席の小さな地元密着居酒屋、食楽居酒屋 沼ちゃんとこ。ランチも夜も、ボリューム満点の料理と店主の人柄でほっと落ち着けるお店です。">
+<meta property="og:title" content="食楽居酒屋 沼ちゃんとこ｜西大路駅近くの地元密着居酒屋">
+<meta property="og:description" content="初めてなのに、なぜか落ち着く。地元に愛される、ボリューム満点の居酒屋。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/numachan/numachan-wall-hero.png">
+<style>
+:root{
+  --paper:#fff8ed;
+  --cream:#f2dfc3;
+  --wall:#d8c9b6;
+  --ink:#1b130d;
+  --brown:#71401f;
+  --brown-2:#9b6232;
+  --red:#ad3d27;
+  --orange:#d98232;
+  --gold:#c79146;
+  --muted:#716357;
+  --line:rgba(113,64,31,.24);
+  --shadow:0 22px 70px rgba(70,39,20,.14);
+  --serif:"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif;
+  --sans:"Yu Gothic","Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.9;-webkit-font-smoothing:antialiased;overflow-x:clip}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%;height:100%;object-fit:cover}
+.shell{width:min(1120px,calc(100% - 44px));margin-inline:auto}
+.progress{position:fixed;z-index:500;top:0;left:0;height:3px;width:0;background:var(--gold)}
+.header{position:fixed;z-index:400;top:0;left:0;right:0;height:86px;display:grid;grid-template-columns:330px 1fr 220px;background:rgba(255,248,237,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;padding:0 30px;border-right:1px solid var(--line);font-family:var(--serif);font-weight:700;letter-spacing:.06em}
+.brand > span:last-child{font-size:24px;line-height:1.24}
+.mark{display:grid;place-items:center;width:46px;height:46px;margin-right:14px;border:1px solid var(--brown);border-radius:50%;color:var(--brown);font-size:25px}
+.brand small{display:block;font-family:var(--sans);font-size:10.4px;color:var(--muted);letter-spacing:.18em}
+.nav{display:flex;align-items:center;justify-content:center;gap:30px;font-size:14.3px;letter-spacing:.08em}
+.nav a{position:relative}
+.nav a:after{content:"";position:absolute;left:0;right:100%;bottom:-6px;border-bottom:1px solid var(--brown);transition:right .25s ease}
+.nav a:hover:after{right:0}
+.reserve{display:flex;align-items:center;justify-content:center;background:var(--brown);color:#fff;font-weight:700;font-size:15.6px;letter-spacing:.06em}
+.hero{position:relative;min-height:760px;height:100svh;background:var(--wall);overflow:hidden}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{object-position:center;animation:breath 14s ease-in-out infinite alternate}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(218,204,184,.94) 0%,rgba(218,204,184,.78) 31%,rgba(218,204,184,.22) 58%,rgba(46,28,17,.1) 100%)}
+.hero:before{content:"";position:absolute;z-index:1;left:0;right:0;bottom:0;height:30%;background:linear-gradient(0deg,rgba(255,248,237,.95),rgba(255,248,237,0))}
+@keyframes breath{to{transform:scale(1.018)}}
+.hero-copy{position:relative;z-index:2;padding-top:clamp(148px,18vh,208px);max-width:620px}
+.hero-copy.shell{width:min(620px,calc(100% - 44px));margin-left:max(22px,calc((100vw - 1120px)/2));margin-right:auto}
+.eyebrow{font-size:10px;letter-spacing:.22em;color:var(--brown);font-weight:700;text-transform:uppercase}
+.hero h1{font-family:var(--serif);font-size:clamp(42px,5vw,66px);line-height:1.36;letter-spacing:.045em;font-weight:600;margin:22px 0 24px}
+.hero-lead{max-width:36em;margin:0 0 28px;color:#4f4034;font-size:14px}
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+.btn{min-width:165px;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;border:1px solid var(--brown);font-size:12px;font-weight:700;transition:.25s ease;background:rgba(255,248,237,.74)}
+.btn.primary{background:var(--red);border-color:var(--red);color:#fff}
+.btn.instagram{background:#fff;border-color:rgba(113,64,31,.35)}
+.btn:hover{background:#fff;color:var(--brown);transform:translateY(-2px)}
+.hero-card{position:absolute;z-index:2;right:32px;bottom:30px;width:min(430px,36vw);padding:18px 20px;background:rgba(255,248,237,.88);backdrop-filter:blur(8px);border:1px solid rgba(113,64,31,.28);box-shadow:var(--shadow)}
+.hero-card b{font-family:var(--serif);font-size:20px}
+.hero-card p{margin:6px 0 0;font-size:12px;color:var(--muted)}
+.section{padding:clamp(86px,10vw,132px) 0}
+.head{display:grid;grid-template-columns:160px 1fr;gap:30px;align-items:end;margin-bottom:48px}
+.no{font-size:10px;letter-spacing:.2em;color:var(--brown);font-weight:700}
+.title{font-family:var(--serif);font-size:clamp(35px,4.7vw,62px);line-height:1.28;font-weight:600;margin:0;letter-spacing:.045em}
+.title small{display:block;margin-top:14px;font-family:var(--sans);font-size:11px;letter-spacing:.16em;color:var(--gold)}
+.reason{background:var(--paper)}
+.reason-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.reason-card{padding:26px 24px 24px;border-top:1px solid var(--brown);background:rgba(255,255,255,.28)}
+.reason-num{font-family:var(--serif);font-size:42px;color:var(--gold);line-height:1}
+.reason-card h3{font-family:var(--serif);font-size:23px;margin:14px 0 12px}
+.reason-card p{font-size:13px;color:var(--muted);margin:0}
+.story{background:var(--cream)}
+.story-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,8vw,100px);align-items:center}
+.portrait{height:620px;position:relative;box-shadow:var(--shadow)}
+.portrait img{object-position:center 27%;filter:saturate(.96) contrast(1.02)}
+.portrait:after{content:"NUMA-CHAN";position:absolute;right:-18px;top:20px;writing-mode:vertical-rl;color:#fff;font-size:10px;letter-spacing:.22em}
+.story h2{font-family:var(--serif);font-size:clamp(30px,4vw,50px);line-height:1.5;margin:18px 0 28px;font-weight:600}
+.story p{font-size:14px;color:var(--muted);margin:0 0 18px}
+.quote{margin-top:34px;padding:24px 0;border-top:1px solid var(--brown);border-bottom:1px solid var(--brown);font-family:var(--serif);font-size:20px;line-height:1.8;color:var(--brown)}
+.menu{background:#2a1a10;color:#fff}
+.menu .no{color:#d9b276}
+.menu .title small{color:#d9b276}
+.menu-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:24px}
+.food-main{min-height:540px;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.food-main:after{content:"お腹いっぱい食べて、気持ちよく飲める。";position:absolute;left:24px;bottom:24px;padding:12px 16px;background:rgba(42,26,16,.84);font-family:var(--serif);font-size:20px}
+.food-list{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.food-card{background:#fff8ed;color:var(--ink);min-height:258px;overflow:hidden}
+.food-card figure{height:188px;margin:0}
+.food-card div{padding:16px 18px}
+.food-card b{font-family:var(--serif);font-size:18px}
+.food-card p{margin:6px 0 0;font-size:12px;color:var(--muted)}
+.lunch{background:var(--paper)}
+.use-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.use-card{position:relative;min-height:520px;overflow:hidden;background:#ddd;box-shadow:var(--shadow)}
+.use-card img{position:absolute;inset:0}
+.use-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(30,18,10,.78),rgba(30,18,10,.16))}
+.use-copy{position:absolute;z-index:2;left:28px;right:28px;bottom:28px;color:#fff}
+.use-copy span{font-size:12px;letter-spacing:.2em;color:#f4d29a}
+.use-copy h3{font-family:var(--serif);font-size:clamp(27px,2.25vw,36px);line-height:1.32;margin:10px 0 12px;white-space:nowrap}
+.use-copy p{font-size:15.6px;margin:0 0 18px;color:#fff7ea;white-space:nowrap}
+.use-copy .btn{color:#4b260f;background:rgba(255,248,237,.94);border-color:rgba(255,248,237,.9);font-size:14.4px}
+.use-copy .btn span{color:inherit;font-size:inherit;letter-spacing:normal}
+.space{background:#efe1cb}
+.space-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:26px}
+.space-main{height:520px;box-shadow:var(--shadow)}
+.space-copy{display:grid;gap:22px}
+.space-copy figure{height:250px;margin:0;box-shadow:var(--shadow)}
+.space-text{padding:22px 0 0;border-top:1px solid var(--brown)}
+.space-text h3{font-family:var(--serif);font-size:25px;margin:0 0 12px}
+.space-text p{font-size:13px;color:var(--muted);margin:0}
+.voice{background:var(--paper)}
+.voice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.voice-card{padding:26px 24px;background:#fff;border:1px solid var(--line);box-shadow:0 14px 45px rgba(70,39,20,.08)}
+.voice-card b{font-family:var(--serif);font-size:19px}
+.voice-card p{font-size:13px;color:var(--muted);margin:12px 0 0}
+.insta{background:var(--cream)}
+.photo-strip{display:grid;grid-template-columns:1.15fr .85fr 1fr;gap:18px;align-items:stretch}
+.photo-strip figure{height:330px;margin:0;overflow:hidden;box-shadow:var(--shadow)}
+.photo-strip figure:nth-child(2){height:420px;margin-top:-45px}
+.faq{background:var(--paper)}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.faq-item{border-top:1px solid var(--brown);padding:26px 0}
+.faq-item h3{margin:0 0 12px;font-size:19.2px}
+.faq-item p{margin:0;font-size:15.6px;color:#4f4034;font-weight:600;display:flex;gap:10px;align-items:flex-start}
+.faq-item p:before{content:"A";display:inline-grid;place-items:center;flex:0 0 28px;width:28px;height:28px;border-radius:50%;background:var(--brown);color:#fff;font-family:var(--serif);font-size:17px;line-height:1}
+.access{background:var(--cream)}
+.access-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.info{border-top:1px solid var(--brown)}
+.row{display:grid;grid-template-columns:130px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--line);font-size:15.6px}
+.row b{font-size:14.5px;letter-spacing:.1em;color:var(--brown)}
+.map{margin-top:28px;display:flex;justify-content:space-between;padding:19px 22px;background:var(--brown);color:#fff;font-size:14.4px}
+.hours{border-top:1px solid var(--brown);padding-top:20px}
+.hours h3{font-family:var(--serif);font-size:30px;margin:0 0 18px}
+.hours-grid{display:grid;grid-template-columns:108px 1fr;gap:10px 20px;font-size:15.6px}
+.closed{color:var(--red)}
+.final{position:relative;overflow:hidden;background:var(--brown);color:#fff;padding:clamp(82px,10vw,128px) 0;text-align:center}
+.final:before{content:"沼";position:absolute;right:-.08em;bottom:-.48em;font-family:var(--serif);font-size:clamp(260px,36vw,530px);line-height:1;color:rgba(255,255,255,.06)}
+.final-inner{position:relative;z-index:2}
+.final h2{font-family:var(--serif);font-size:clamp(30px,4.4vw,56px);line-height:1.55;margin:20px 0 34px}
+.final p:not(.eyebrow){font-size:18px;line-height:2.05}
+.final .btn{font-size:15.6px;background:#fff8ed;color:#4b260f;border-color:#fff8ed}
+.final .btn.primary{background:var(--red);border-color:var(--red);color:#fff}
+.final .btn.instagram{background:#fff;color:#4b260f;border-color:#fff}
+.final .btn span{color:inherit}
+.sticky-cta{display:none}
+footer{padding:28px 30px 90px;background:#1d120c;color:#b29980;display:flex;justify-content:space-between;gap:20px;font-size:10px;letter-spacing:.1em}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .85s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:880px){
+  .header{height:66px;grid-template-columns:1fr 150px}.brand{border:0;padding:0 16px}.brand small,.nav{display:none}.brand > span:last-child{font-size:19px}.mark{width:40px;height:40px;font-size:22px}.reserve{font-size:12px}
+  .hero{min-height:720px;height:92svh}.hero-bg img{object-position:62% center}.hero:after{background:linear-gradient(90deg,rgba(218,204,184,.92),rgba(218,204,184,.72) 50%,rgba(218,204,184,.12))}
+  .hero-card{display:none}.hero-copy{padding-top:132px;max-width:520px}.hero-copy.shell{width:min(520px,calc(100% - 28px));margin-left:14px}.head{grid-template-columns:1fr;gap:8px}
+  .reason-grid,.story-grid,.menu-grid,.use-grid,.space-grid,.access-grid,.faq-grid{grid-template-columns:1fr}.portrait{height:560px}.food-list{grid-template-columns:1fr 1fr}.voice-grid{grid-template-columns:1fr}.photo-strip{grid-template-columns:1fr}.photo-strip figure,.photo-strip figure:nth-child(2){height:340px;margin-top:0}
+  .sticky-cta{position:fixed;z-index:450;left:10px;right:10px;bottom:10px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;padding:8px;background:rgba(255,248,237,.92);backdrop-filter:blur(12px);border:1px solid var(--line);box-shadow:0 14px 45px rgba(0,0,0,.16)}
+  .sticky-cta a{display:grid;place-items:center;min-height:46px;background:var(--brown);color:#fff;font-size:12px;font-weight:700}.sticky-cta a:nth-child(2){background:var(--red)}.sticky-cta a:nth-child(3){background:#fff;color:var(--brown);border:1px solid var(--line)}
+}
+@media(max-width:560px){
+  .shell{width:calc(100% - 28px)}.hero h1{font-size:37px}.hero-lead{font-size:12px;max-width:24em}.actions{display:grid;grid-template-columns:1fr 1fr}.hero .actions{grid-template-columns:1fr}.btn{min-width:0;padding:13px 14px}
+  .portrait{height:470px}.food-main{min-height:390px}.food-list{grid-template-columns:1fr}.use-card{min-height:430px}.use-copy h3,.use-copy p{white-space:normal}.use-copy h3{font-size:30px}.use-copy p{font-size:14.5px}.space-main{height:360px}.row{grid-template-columns:100px 1fr}.final .actions{grid-template-columns:1fr}footer{flex-direction:column}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+<header class="header">
+  <a class="brand" href="#top"><span class="mark">沼</span><span><small>SHOKURAKU IZAKAYA</small>沼ちゃんとこ</span></a>
+  <nav class="nav" aria-label="メインナビゲーション">
+    <a href="#reason">選ばれる理由</a><a href="#story">店主</a><a href="#menu">料理</a><a href="#lunch">ランチ</a><a href="#access">アクセス</a>
+  </nav>
+  <a class="reserve" href="https://numachantoko.owst.jp/" target="_blank" rel="noopener" data-track="header_reserve_click">席を予約する ↗</a>
+</header>
+<main id="top">
+  <section class="hero">
+    <figure class="hero-bg"><img src="assets/numachan/numachan-wall-hero.png" alt="食楽居酒屋 沼ちゃんとこの店主が明るい店内で迎える様子"></figure>
+    <div class="hero-copy shell">
+      <p class="eyebrow reveal">KYOTO / NISHIOJI / LOCAL IZAKAYA</p>
+      <h1 class="reveal">初めてなのに、<br>なぜか落ち着く。</h1>
+      <p class="hero-lead reveal">地元に愛される、ボリューム満点の小さな居酒屋。西大路駅南口から徒歩約5分。ランチも夜も、しっかり食べて気楽に飲めるお店です。</p>
+      <div class="actions reveal">
+        <a class="btn primary" href="https://numachantoko.owst.jp/" target="_blank" rel="noopener" data-track="fv_reserve_click"><span>席を予約する</span><span>↗</span></a>
+        <a class="btn" href="tel:0757563687" data-track="fv_tel_click"><span>電話をかける</span><span>☎</span></a>
+        <a class="btn instagram" href="https://www.instagram.com/numachantoko?igsh=MWIwaWh0OWszMWc4ZA==" target="_blank" rel="noopener" data-track="fv_instagram_click"><span>Instagramを見る</span><span>↗</span></a>
+      </div>
+    </div>
+    <aside class="hero-card reveal">
+      <b>裏西大路にある、隠れ家的な地元酒場。</b>
+      <p>店主との距離が近く、どなたが来店されてもウエルカムな雰囲気があるお店です。</p>
+    </aside>
+  </section>
+
+  <section class="section reason" id="reason" data-section="reason">
+    <div class="shell">
+      <div class="head">
+        <span class="no reveal">01 / WHY CHOOSE US</span>
+        <h2 class="title reveal">この店が選ばれる、<br>3つの理由。<small>PERSON / VOLUME / LOCAL</small></h2>
+      </div>
+      <div class="reason-grid">
+        <article class="reason-card reveal"><span class="reason-num">01</span><h3>50代店主の気さくな人柄</h3><p>初めてでも話しかけやすく、常連にも混じりやすい。料理の前に、まず人の安心感があるお店です。</p></article>
+        <article class="reason-card reveal"><span class="reason-num">02</span><h3>ボリューム満点の手作り料理</h3><p>きれいに整えすぎた料理ではなく、しっかり食べられる満足感。昼も夜も使いやすい一皿を揃えます。</p></article>
+        <article class="reason-card reveal"><span class="reason-num">03</span><h3>ランチも夜も使える地元感</h3><p>仕事の合間のランチ、仕事帰りの一杯、夫婦や友人との夜。地域の人が日常で使える距離感です。</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section story" id="story" data-section="owner">
+    <div class="shell story-grid">
+      <figure class="portrait reveal"><img src="assets/numachan/numachan-portrait.jpg" alt="食楽居酒屋 沼ちゃんとこの店主 沼ちゃん"></figure>
+      <div class="story-copy reveal">
+        <p class="eyebrow">OWNER / NUMA-CHAN</p>
+        <h2>料理の向こうに、<br>店主の顔が見える店。</h2>
+        <p>「うまかった」「また来るわ」。その一言が聞きたくて、今日も店に立っています。店名に“沼ちゃん”が入っているからこそ、料理だけではなく、店主本人の安心感を大きく見せます。</p>
+        <p>派手な高級感より、気軽に入れること。チェーン店のような均一感より、地元の人に覚えてもらえること。この店の強みは、料理と人柄が近いことです。</p>
+        <div class="quote">「初めてでも、気づけば会話が生まれる。」<br>そんな空気感が味わえるお店です。</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section menu" id="menu" data-section="menu">
+    <div class="shell">
+      <div class="head">
+        <span class="no reveal">03 / FOOD</span>
+        <h2 class="title reveal">ボリューム満点。<br>ちゃんと腹に残る料理。<small>POPULAR MENU</small></h2>
+      </div>
+      <div class="menu-grid">
+        <figure class="food-main reveal"><img src="assets/numachan/tonpei-yaki.jpg" alt="ボリュームのあるとん平焼き"></figure>
+        <div class="food-list reveal">
+          <article class="food-card"><figure><img src="assets/numachan/sashimi.jpg" alt="刺身盛り合わせ"></figure><div><b>刺身盛り合わせ</b><p>鉄板料理だけではない、居酒屋としての幅を見せる一皿。</p></div></article>
+          <article class="food-card"><figure><img src="assets/numachan/awaji-onion.png" alt="淡路島玉ねぎステーキ"></figure><div><b>淡路島玉ねぎ</b><p>甘みのある素材感。地元密着の温かさと相性が良い看板料理。</p></div></article>
+          <article class="food-card"><figure><img src="assets/numachan/numachan-steak.png" alt="肉料理"></figure><div><b>肉料理</b><p>仕事帰りの一杯にも、しっかり食べたい夜にも。</p></div></article>
+          <article class="food-card"><figure><img src="assets/numachan/sake-shelf.jpg" alt="店内のお酒"></figure><div><b>お酒いろいろ</b><p>酒棚の写真で、夜に寄りたくなる空気を伝えます。</p></div></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section lunch" id="lunch" data-section="lunch_night">
+    <div class="shell">
+      <div class="head">
+        <span class="no reveal">04 / LUNCH & NIGHT</span>
+        <h2 class="title reveal">昼はしっかり、<br>夜はゆっくり。<small>TWO USE SCENES</small></h2>
+      </div>
+      <div class="use-grid">
+        <article class="use-card reveal">
+          <img src="assets/numachan/chicken-nanban.jpg" alt="チキン南蛮定食">
+          <div class="use-copy"><span>LUNCH</span><h3>地元で働く人にうれしい、満足ランチ。</h3><p>仕事の合間に使いやすく、しっかり食べられる昼の一軒です。</p><a class="btn" href="https://numachantoko.owst.jp/menu" target="_blank" rel="noopener" data-track="lunch_menu_click"><span>ランチメニューを見る</span><span>↗</span></a></div>
+        </article>
+        <article class="use-card reveal">
+          <img src="assets/numachan/sake-shelf.jpg" alt="夜に飲みたくなる酒棚">
+          <div class="use-copy"><span>NIGHT</span><h3>仕事帰りに、気を張らずに寄れる場所。</h3><p>一人飲み、夫婦、友人まで、ちょうどいい距離感で楽しめます。</p><a class="btn" href="tel:0757563687" data-track="night_tel_click"><span>電話で確認する</span><span>☎</span></a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section space" id="space" data-section="seats">
+    <div class="shell">
+      <div class="head">
+        <span class="no reveal">05 / SEATS</span>
+        <h2 class="title reveal">15席の小ささを、<br>魅力に変える。<small>COUNTER & TABLE</small></h2>
+      </div>
+      <div class="space-grid">
+        <figure class="space-main reveal"><img src="assets/numachan/interior-counter.png" alt="沼ちゃんとこの店内カウンター"></figure>
+        <div class="space-copy reveal">
+          <figure><img src="assets/numachan/interior-tables.png" alt="テーブル席"></figure>
+          <div class="space-text">
+            <h3>初めてでも、距離が近い。</h3>
+            <p>席数が少ないことは弱みではなく、落ち着きや常連感につながります。カウンター、一人利用、グループ利用が分かるように構成しています。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section voice" id="voice" data-section="voice">
+    <div class="shell">
+      <div class="head">
+        <span class="no reveal">06 / VOICE</span>
+        <h2 class="title reveal">初見の不安を、<br>第三者の声で下げる。<small>CUSTOMER VOICE</small></h2>
+      </div>
+      <div class="voice-grid reveal">
+        <article class="voice-card"><b>初めてでも入りやすい</b><p>店主さんが気さくで、初めてでも緊張せずに過ごせました。料理もボリュームがあって満足です。</p></article>
+        <article class="voice-card"><b>ランチでも夜でも使える</b><p>昼はしっかり食べられて、夜はゆっくり飲める。近くにあると嬉しいタイプのお店です。</p></article>
+        <article class="voice-card"><b>また顔を見に行きたくなる</b><p>料理だけじゃなく、店主さんの雰囲気が良い。常連さんが多い理由が分かります。</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section insta" id="instagram" data-section="instagram">
+    <div class="shell">
+      <div class="head">
+        <span class="no reveal">07 / INSTAGRAM</span>
+        <h2 class="title reveal">来店前に、<br>店の空気を確認する。<small>SHOP MOOD</small></h2>
+      </div>
+      <div class="photo-strip reveal">
+        <figure><img src="assets/numachan/exterior-sign.jpg" alt="夜の看板"></figure>
+        <figure><img src="assets/numachan/sake-shelf.jpg" alt="店内のお酒"></figure>
+        <figure><img src="assets/numachan/exterior-front.jpg" alt="外観"></figure>
+      </div>
+      <div class="actions reveal" style="margin-top:30px">
+        <a class="btn instagram" href="https://www.instagram.com/numachantoko?igsh=MWIwaWh0OWszMWc4ZA==" target="_blank" rel="noopener" data-track="instagram_section_click"><span>Instagramを見る</span><span>↗</span></a>
+        <a class="btn" href="https://www.threads.com/@numachantoko?igshid=NTc4MTIwNjQ2YQ==" target="_blank" rel="noopener" data-track="threads_section_click"><span>Threadsを見る</span><span>↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section faq" id="faq" data-section="faq">
+    <div class="shell">
+      <div class="head">
+        <span class="no reveal">08 / FAQ</span>
+        <h2 class="title reveal">入りづらさを、<br>先に消しておく。<small>FIRST VISIT QUESTIONS</small></h2>
+      </div>
+      <div class="faq-grid reveal">
+        <div class="faq-item"><h3>一人でも入れますか？</h3><p>はい。カウンター席があり、一人飲みや仕事帰りの利用もしやすいお店です。</p></div>
+        <div class="faq-item"><h3>初めてでも大丈夫ですか？</h3><p>大丈夫です。店主との距離が近く、初めてでも落ち着いて過ごしやすい雰囲気です。</p></div>
+        <div class="faq-item"><h3>ランチだけでも利用できますか？</h3><p>はい。ランチ営業日があります。営業時間は来店前に店舗へご確認ください。</p></div>
+        <div class="faq-item"><h3>予約は必要ですか？</h3><p>15席の小さなお店のため、夜や週末は予約・電話確認がおすすめです。</p></div>
+        <div class="faq-item"><h3>夫婦や友人との利用はできますか？</h3><p>はい。テーブル席もあり、少人数での食事や飲み利用に向いています。</p></div>
+        <div class="faq-item"><h3>支払い方法は？</h3><p>現金はもちろん、クレジットカード（VISA・マスター・JCB）とQRコード決済が利用できます。電子マネーは利用不可です。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section access" id="access" data-section="access">
+    <div class="shell">
+      <div class="head">
+        <span class="no reveal">09 / ACCESS & RESERVE</span>
+        <h2 class="title reveal">西大路駅南口から、<br>歩いて約5分。<small>SHOP INFORMATION</small></h2>
+      </div>
+      <div class="access-grid">
+        <div class="info reveal">
+          <div class="row"><b>店名</b><span>食楽居酒屋 沼ちゃんとこ</span></div>
+          <div class="row"><b>所在地</b><span>〒601-8313<br>京都府京都市南区吉祥院中島町30-71</span></div>
+          <div class="row"><b>アクセス</b><span>JR東海道本線 西大路駅南口より徒歩約5分</span></div>
+          <div class="row"><b>電話</b><span><a href="tel:0757563687" data-track="access_tel_click">075-756-3687</a></span></div>
+          <div class="row"><b>定休日</b><span>日曜日・第2月曜日</span></div>
+          <a class="map" href="https://www.google.com/maps/search/?api=1&query=%E4%BA%AC%E9%83%BD%E5%BA%9C%E4%BA%AC%E9%83%BD%E5%B8%82%E5%8D%97%E5%8C%BA%E5%90%89%E7%A5%A5%E9%99%A2%E4%B8%AD%E5%B3%B6%E7%94%BA30-71" target="_blank" rel="noopener" data-track="access_map_click"><span>Google Mapsで開く</span><span>↗</span></a>
+        </div>
+        <div class="hours reveal">
+          <h3>営業時間</h3>
+          <div class="hours-grid">
+            <b>月・火</b><span>11:30–14:00 / 17:30–23:00</span>
+            <b>水・木</b><span>11:30–14:00 / 17:30–23:00</span>
+            <b>金</b><span>11:30–14:00 / 17:30–23:00</span>
+            <b>土</b><span>17:30–23:00</span>
+            <b>日</b><span class="closed">定休日</span>
+          </div>
+          <p style="font-size:11px;color:var(--muted);margin-top:24px">※第2月曜日は定休日です。営業時間は来店前に店舗へご確認ください。</p>
+          <div class="actions" style="margin-top:26px">
+            <a class="btn primary" href="https://numachantoko.owst.jp/" target="_blank" rel="noopener" data-track="access_reserve_click"><span>席を予約する</span><span>↗</span></a>
+            <a class="btn" href="tel:0757563687" data-track="access_phone_click"><span>電話をかける</span><span>☎</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final" data-section="final_cta">
+    <div class="final-inner shell reveal">
+      <p class="eyebrow">SEE YOU AT NISHIOJI</p>
+      <h2>なんか入りやすそう。<br>店主に会ってみたい。<br>料理もボリュームあって良さそう。</h2>
+      <p style="margin:0 auto 30px;max-width:44em;color:#ead8c7">そう思ってもらえることが、このページのゴールです。京都・西大路でも、<br>ランチでも夜でも一度行ってみたい居酒屋として見せます。</p>
+      <div class="actions" style="justify-content:center">
+        <a class="btn primary" href="https://numachantoko.owst.jp/" target="_blank" rel="noopener" data-track="final_reserve_click"><span>席を予約する</span><span>↗</span></a>
+        <a class="btn" href="tel:0757563687" data-track="final_tel_click"><span>電話をかける</span><span>☎</span></a>
+        <a class="btn instagram" href="https://www.instagram.com/numachantoko?igsh=MWIwaWh0OWszMWc4ZA==" target="_blank" rel="noopener" data-track="final_instagram_click"><span>Instagramを見る</span><span>↗</span></a>
+        <a class="btn" href="https://www.threads.com/@numachantoko?igshid=NTc4MTIwNjQ2YQ==" target="_blank" rel="noopener" data-track="final_threads_click"><span>Threadsを見る</span><span>↗</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+<div class="sticky-cta" aria-label="スマホ固定CTA">
+  <a href="tel:0757563687" data-track="sticky_tel_click">電話</a>
+  <a href="https://numachantoko.owst.jp/" target="_blank" rel="noopener" data-track="sticky_reserve_click">予約</a>
+  <a href="https://www.instagram.com/numachantoko?igsh=MWIwaWh0OWszMWc4ZA==" target="_blank" rel="noopener" data-track="sticky_instagram_click">Instagram</a>
+</div>
+<footer><span>© 食楽居酒屋 沼ちゃんとこ</span><span>KYOTO / NISHIOJI / LOCAL IZAKAYA</span></footer>
+<script>
+const progress=document.querySelector('.progress');
+let ticking=false;
+function updateProgress(){
+  const max=document.documentElement.scrollHeight-innerHeight;
+  progress.style.width=(max?scrollY/max*100:0)+'%';
+  ticking=false;
+}
+addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(updateProgress);ticking=true;}},{passive:true});
+updateProgress();
+const io=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('in');io.unobserve(entry.target);}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>anchor.addEventListener('click',event=>{
+  const target=document.querySelector(anchor.getAttribute('href'));
+  if(target){event.preventDefault();target.scrollIntoView({behavior:reduce?'auto':'smooth'});}
+}));
+</script>
+</body>
+</html>
