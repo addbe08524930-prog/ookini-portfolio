@@ -170,3 +170,10 @@ p,.faq-item p{text-wrap:pretty}
   .hero-bg{height:49%}
   .hero:after{height:50%}
 }
+/* ---------- Menu links on dark section ---------- */
+.menu-links{margin-top:clamp(28px,3vw,44px)}
+.menu .btn{--sw:var(--red);background-color:var(--paper);color:var(--brown);border-color:var(--paper)}
+.menu .btn.primary{--sw:var(--red-deep);background-color:var(--red);color:#fff;border-color:var(--red)}
+@media(max-width:620px){.menu-links{display:grid;grid-template-columns:1fr;gap:8px}}
+.menu-note{margin:18px 0 0;font-size:15px;color:#f0dcca}
+.menu-note a{margin-left:10px;color:#fff;text-decoration:underline;text-decoration-color:var(--red);text-underline-offset:5px;font-weight:700;letter-spacing:.04em}
