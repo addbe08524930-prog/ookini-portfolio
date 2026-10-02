@@ -77,7 +77,7 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 .story-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,8vw,100px);align-items:center}
 .portrait{height:620px;position:relative;box-shadow:var(--shadow)}
 .portrait img{object-position:center 27%;filter:saturate(.96) contrast(1.02)}
-.portrait:after{content:"NUMA-CHAN";position:absolute;right:-18px;top:20px;writing-mode:vertical-rl;color:#fff;font-size:10px;letter-spacing:.22em}
+.portrait:after{content:"NUMA-CHAN";position:absolute;right:-18px;top:20px;color:#fff;font-size:10px;letter-spacing:.22em}
 .story h2{font-family:var(--serif);font-size:clamp(30px,4vw,50px);line-height:1.5;margin:18px 0 28px;font-weight:600}
 .story p{font-size:14px;color:var(--muted);margin:0 0 18px}
 .quote{margin-top:34px;padding:24px 0;border-top:1px solid var(--brown);border-bottom:1px solid var(--brown);font-family:var(--serif);font-size:20px;line-height:1.8;color:var(--brown)}
@@ -166,8 +166,23 @@ footer{padding:28px 30px 90px;background:#1d120c;color:#b29980;display:flex;just
   *{animation:none!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}
 }
 </style>
+<link rel="stylesheet" href="numachan-editorial.css">
+<link rel="stylesheet" href="numachan-awwwards.css">
+<script>
+if('IntersectionObserver' in window)document.documentElement.classList.add('motion-ready');
+(function(){
+  var r=document.documentElement,seen=0,skip;
+  r.classList.add('aw');
+  try{seen=sessionStorage.getItem('numaIntro')}catch(e){}
+  skip=!!seen||/[?&]nointro/.test(location.search)||matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(/[?&]intro/.test(location.search)&&!/nointro/.test(location.search))skip=false;
+  if(skip)r.classList.add('no-intro');else try{sessionStorage.setItem('numaIntro','1')}catch(e){}
+  setTimeout(function(){r.classList.add('hero-go')},skip?80:1250);
+})();
+</script>
 </head>
 <body>
+<div class="intro" aria-hidden="true"><div class="intro-panel a"></div><div class="intro-panel b"><div class="intro-mark"><svg viewBox="0 0 96 96"><circle cx="48" cy="48" r="48"/></svg><b>沼</b></div><div class="intro-name">沼ちゃんとこ</div></div></div>
 <div class="progress" aria-hidden="true"></div>
 <header class="header">
   <a class="brand" href="#top"><span class="mark">沼</span><span><small>SHOKURAKU IZAKAYA</small>沼ちゃんとこ</span></a>
@@ -180,9 +195,9 @@ footer{padding:28px 30px 90px;background:#1d120c;color:#b29980;display:flex;just
   <section class="hero">
     <figure class="hero-bg"><img src="assets/numachan/numachan-wall-hero.png" alt="食楽居酒屋 沼ちゃんとこの店主が明るい店内で迎える様子"></figure>
     <div class="hero-copy shell">
-      <p class="eyebrow reveal">KYOTO / NISHIOJI / LOCAL IZAKAYA</p>
-      <h1 class="reveal">初めてなのに、<br>なぜか落ち着く。</h1>
-      <p class="hero-lead reveal">地元に愛される、ボリューム満点の小さな居酒屋。西大路駅南口から徒歩約5分。ランチも夜も、しっかり食べて気楽に飲めるお店です。</p>
+      <p class="eyebrow reveal">京都・西大路の、いつもの一軒。</p>
+      <h1 class="reveal">初めてなのに、<br><em>なぜか落ち着く。</em></h1>
+      <p class="hero-lead reveal">鉄板の前に、沼ちゃんがいる。<br>昼はしっかり、夜は気楽に。<br>西大路駅南口から歩いて約5分の居酒屋です。</p>
       <div class="actions reveal">
         <a class="btn primary" href="https://numachantoko.owst.jp/" target="_blank" rel="noopener" data-track="fv_reserve_click"><span>席を予約する</span><span>↗</span></a>
         <a class="btn" href="tel:0757563687" data-track="fv_tel_click"><span>電話をかける</span><span>☎</span></a>
@@ -193,7 +208,10 @@ footer{padding:28px 30px 90px;background:#1d120c;color:#b29980;display:flex;just
       <b>裏西大路にある、隠れ家的な地元酒場。</b>
       <p>店主との距離が近く、どなたが来店されてもウエルカムな雰囲気があるお店です。</p>
     </aside>
+    <a class="scroll-cue" href="#reason" aria-label="選ばれる理由へ進む"><span>SCROLL TO EXPLORE</span><span class="scroll-cue-line"></span></a>
   </section>
+
+  <div class="intro-band" aria-hidden="true"><span>また、ふらっと。</span><span>KYOTO · NISHIOJI</span><span>また、ふらっと。</span></div>
 
   <section class="section reason" id="reason" data-section="reason">
     <div class="shell">
@@ -202,9 +220,9 @@ footer{padding:28px 30px 90px;background:#1d120c;color:#b29980;display:flex;just
         <h2 class="title reveal">この店が選ばれる、<br>3つの理由。<small>PERSON / VOLUME / LOCAL</small></h2>
       </div>
       <div class="reason-grid">
-        <article class="reason-card reveal"><span class="reason-num">01</span><h3>50代店主の気さくな人柄</h3><p>初めてでも話しかけやすく、常連にも混じりやすい。料理の前に、まず人の安心感があるお店です。</p></article>
-        <article class="reason-card reveal"><span class="reason-num">02</span><h3>ボリューム満点の手作り料理</h3><p>きれいに整えすぎた料理ではなく、しっかり食べられる満足感。昼も夜も使いやすい一皿を揃えます。</p></article>
-        <article class="reason-card reveal"><span class="reason-num">03</span><h3>ランチも夜も使える地元感</h3><p>仕事の合間のランチ、仕事帰りの一杯、夫婦や友人との夜。地域の人が日常で使える距離感です。</p></article>
+        <article class="reason-card reveal"><span class="reason-num">01</span><h3>沼ちゃんが迎えます。</h3><p>初めての一杯も、いつもの一杯も。気取らず過ごせる距離感が、この店らしさです。</p></article>
+        <article class="reason-card reveal"><span class="reason-num">02</span><h3>料理は、しっかり。</h3><p>鉄板料理に、刺身に、昼の定食。お腹をすかせて来てほしい一軒です。</p></article>
+        <article class="reason-card reveal"><span class="reason-num">03</span><h3>昼にも、夜にも。</h3><p>仕事の合間のランチから、帰り道の一杯まで。西大路の日常に寄り添います。</p></article>
       </div>
     </div>
   </section>
@@ -215,8 +233,8 @@ footer{padding:28px 30px 90px;background:#1d120c;color:#b29980;display:flex;just
       <div class="story-copy reveal">
         <p class="eyebrow">OWNER / NUMA-CHAN</p>
         <h2>料理の向こうに、<br>店主の顔が見える店。</h2>
-        <p>「うまかった」「また来るわ」。その一言が聞きたくて、今日も店に立っています。店名に“沼ちゃん”が入っているからこそ、料理だけではなく、店主本人の安心感を大きく見せます。</p>
-        <p>派手な高級感より、気軽に入れること。チェーン店のような均一感より、地元の人に覚えてもらえること。この店の強みは、料理と人柄が近いことです。</p>
+        <p>店の名前を見れば、店主の顔が浮かぶ。そんな小さな居酒屋です。鉄板の前に立つ沼ちゃんのすぐそばで、できたての一皿と一杯をどうぞ。</p>
+        <p>一人でふらっと、友人とゆっくり。初めての日にも肩の力を抜いて過ごせる、裏西大路の地元酒場です。</p>
         <div class="quote">「初めてでも、気づけば会話が生まれる。」<br>そんな空気感が味わえるお店です。</div>
       </div>
     </div>
@@ -231,10 +249,10 @@ footer{padding:28px 30px 90px;background:#1d120c;color:#b29980;display:flex;just
       <div class="menu-grid">
         <figure class="food-main reveal"><img src="assets/numachan/tonpei-yaki.jpg" alt="ボリュームのあるとん平焼き"></figure>
         <div class="food-list reveal">
-          <article class="food-card"><figure><img src="assets/numachan/sashimi.jpg" alt="刺身盛り合わせ"></figure><div><b>刺身盛り合わせ</b><p>鉄板料理だけではない、居酒屋としての幅を見せる一皿。</p></div></article>
-          <article class="food-card"><figure><img src="assets/numachan/awaji-onion.png" alt="淡路島玉ねぎステーキ"></figure><div><b>淡路島玉ねぎ</b><p>甘みのある素材感。地元密着の温かさと相性が良い看板料理。</p></div></article>
+          <article class="food-card"><figure><img src="assets/numachan/sashimi.jpg" alt="刺身盛り合わせ" loading="lazy"></figure><div><b>刺身盛り合わせ</b><p>一杯目と一緒に、まずはここから。</p></div></article>
+          <article class="food-card"><figure><img src="assets/numachan/awaji-onion.png" alt="淡路島玉ねぎステーキ" loading="lazy"></figure><div><b>淡路島玉ねぎ</b><p>鉄板で焼いて、甘みを引き出す一皿。</p></div></article>
           <article class="food-card"><figure><img src="assets/numachan/numachan-steak.png" alt="肉料理"></figure><div><b>肉料理</b><p>仕事帰りの一杯にも、しっかり食べたい夜にも。</p></div></article>
-          <article class="food-card"><figure><img src="assets/numachan/sake-shelf.jpg" alt="店内のお酒"></figure><div><b>お酒いろいろ</b><p>酒棚の写真で、夜に寄りたくなる空気を伝えます。</p></div></article>
+          <article class="food-card"><figure><img src="assets/numachan/sake-shelf.jpg" alt="店内のお酒" loading="lazy"></figure><div><b>お酒いろいろ</b><p>料理をつまみながら、気楽にもう一杯。</p></div></article>
         </div>
       </div>
     </div>
@@ -263,7 +281,7 @@ footer{padding:28px 30px 90px;background:#1d120c;color:#b29980;display:flex;just
     <div class="shell">
       <div class="head">
         <span class="no reveal">05 / SEATS</span>
-        <h2 class="title reveal">15席の小ささを、<br>魅力に変える。<small>COUNTER & TABLE</small></h2>
+        <h2 class="title reveal">15席の、<br>ちょうどいい近さ。<small>COUNTER & TABLE</small></h2>
       </div>
       <div class="space-grid">
         <figure class="space-main reveal"><img src="assets/numachan/interior-counter.png" alt="沼ちゃんとこの店内カウンター"></figure>
@@ -271,7 +289,7 @@ footer{padding:28px 30px 90px;background:#1d120c;color:#b29980;display:flex;just
           <figure><img src="assets/numachan/interior-tables.png" alt="テーブル席"></figure>
           <div class="space-text">
             <h3>初めてでも、距離が近い。</h3>
-            <p>席数が少ないことは弱みではなく、落ち着きや常連感につながります。カウンター、一人利用、グループ利用が分かるように構成しています。</p>
+            <p>カウンターで一人の時間を。テーブルで気の合う人との食事を。初めてでも、いつものように過ごせる小さなお店です。</p>
           </div>
         </div>
       </div>
@@ -282,12 +300,12 @@ footer{padding:28px 30px 90px;background:#1d120c;color:#b29980;display:flex;just
     <div class="shell">
       <div class="head">
         <span class="no reveal">06 / VOICE</span>
-        <h2 class="title reveal">初見の不安を、<br>第三者の声で下げる。<small>CUSTOMER VOICE</small></h2>
+        <h2 class="title reveal">今日は、<br>どんなふうに過ごす？<small>HOW TO ENJOY</small></h2>
       </div>
       <div class="voice-grid reveal">
-        <article class="voice-card"><b>初めてでも入りやすい</b><p>店主さんが気さくで、初めてでも緊張せずに過ごせました。料理もボリュームがあって満足です。</p></article>
-        <article class="voice-card"><b>ランチでも夜でも使える</b><p>昼はしっかり食べられて、夜はゆっくり飲める。近くにあると嬉しいタイプのお店です。</p></article>
-        <article class="voice-card"><b>また顔を見に行きたくなる</b><p>料理だけじゃなく、店主さんの雰囲気が良い。常連さんが多い理由が分かります。</p></article>
+        <article class="voice-card"><b>一人で、気楽に。</b><p>カウンターで料理を待ちながら、今日の一杯をゆっくり。</p></article>
+        <article class="voice-card"><b>昼は、しっかり。</b><p>仕事の合間にお腹を満たして、午後に戻る。</p></article>
+        <article class="voice-card"><b>夜は、もう一軒。</b><p>友人や家族と料理を囲んで、気づけば話が弾む。</p></article>
       </div>
     </div>
   </section>
@@ -296,7 +314,7 @@ footer{padding:28px 30px 90px;background:#1d120c;color:#b29980;display:flex;just
     <div class="shell">
       <div class="head">
         <span class="no reveal">07 / INSTAGRAM</span>
-        <h2 class="title reveal">来店前に、<br>店の空気を確認する。<small>SHOP MOOD</small></h2>
+        <h2 class="title reveal">あの看板が、<br>今夜の目印。<small>SHOP MOOD</small></h2>
       </div>
       <div class="photo-strip reveal">
         <figure><img src="assets/numachan/exterior-sign.jpg" alt="夜の看板"></figure>
@@ -314,7 +332,7 @@ footer{padding:28px 30px 90px;background:#1d120c;color:#b29980;display:flex;just
     <div class="shell">
       <div class="head">
         <span class="no reveal">08 / FAQ</span>
-        <h2 class="title reveal">入りづらさを、<br>先に消しておく。<small>FIRST VISIT QUESTIONS</small></h2>
+        <h2 class="title reveal">よくあるご質問。<small>FAQ</small></h2>
       </div>
       <div class="faq-grid reveal">
         <div class="faq-item"><h3>一人でも入れますか？</h3><p>はい。カウンター席があり、一人飲みや仕事帰りの利用もしやすいお店です。</p></div>
@@ -340,6 +358,10 @@ footer{padding:28px 30px 90px;background:#1d120c;color:#b29980;display:flex;just
           <div class="row"><b>アクセス</b><span>JR東海道本線 西大路駅南口より徒歩約5分</span></div>
           <div class="row"><b>電話</b><span><a href="tel:0757563687" data-track="access_tel_click">075-756-3687</a></span></div>
           <div class="row"><b>定休日</b><span>日曜日・第2月曜日</span></div>
+          <div class="map-panel">
+            <p class="map-label">お店の場所</p>
+            <iframe title="食楽居酒屋 沼ちゃんとこのGoogleマップ" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3269.0873343088456!2d135.7308386!3d34.979477100000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6001070079899ed1%3A0x2757fe0bad6d4879!2z5rK844Gh44KD44KT44Go44GT!5e0!3m2!1sja!2sjp!4v1790879450105!5m2!1sja!2sjp" width="600" height="450" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
           <a class="map" href="https://www.google.com/maps/search/?api=1&query=%E4%BA%AC%E9%83%BD%E5%BA%9C%E4%BA%AC%E9%83%BD%E5%B8%82%E5%8D%97%E5%8C%BA%E5%90%89%E7%A5%A5%E9%99%A2%E4%B8%AD%E5%B3%B6%E7%94%BA30-71" target="_blank" rel="noopener" data-track="access_map_click"><span>Google Mapsで開く</span><span>↗</span></a>
         </div>
         <div class="hours reveal">
@@ -364,8 +386,8 @@ footer{padding:28px 30px 90px;background:#1d120c;color:#b29980;display:flex;just
   <section class="final" data-section="final_cta">
     <div class="final-inner shell reveal">
       <p class="eyebrow">SEE YOU AT NISHIOJI</p>
-      <h2>なんか入りやすそう。<br>店主に会ってみたい。<br>料理もボリュームあって良さそう。</h2>
-      <p style="margin:0 auto 30px;max-width:44em;color:#ead8c7">そう思ってもらえることが、このページのゴールです。京都・西大路でも、<br>ランチでも夜でも一度行ってみたい居酒屋として見せます。</p>
+      <h2>今夜は、<br>沼ちゃんとこで。</h2>
+      <p style="margin:0 auto 30px;max-width:44em;color:#ead8c7">京都・西大路でも、<br>昼ごはんにも、仕事帰りの一杯にも。<br>お腹をすかせて、ふらっとお越しください。</p>
       <div class="actions" style="justify-content:center">
         <a class="btn primary" href="https://numachantoko.owst.jp/" target="_blank" rel="noopener" data-track="final_reserve_click"><span>席を予約する</span><span>↗</span></a>
         <a class="btn" href="tel:0757563687" data-track="final_tel_click"><span>電話をかける</span><span>☎</span></a>
@@ -391,13 +413,16 @@ function updateProgress(){
 }
 addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(updateProgress);ticking=true;}},{passive:true});
 updateProgress();
-const io=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('in');io.unobserve(entry.target);}}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('in');io.unobserve(entry.target);}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+}
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 document.querySelectorAll('a[href^="#"]').forEach(anchor=>anchor.addEventListener('click',event=>{
   const target=document.querySelector(anchor.getAttribute('href'));
   if(target){event.preventDefault();target.scrollIntoView({behavior:reduce?'auto':'smooth'});}
 }));
 </script>
+<script src="numachan-awwwards.js"></script>
 </body>
 </html>
