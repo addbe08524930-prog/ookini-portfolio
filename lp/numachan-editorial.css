@@ -260,3 +260,59 @@ footer{padding:35px clamp(25px,5vw,80px) 110px;color:#f0dcca;background:#281b14;
   .hero-bg img,.scroll-cue-line{animation:none!important}
   .food-main img,.food-card img,.use-card img,.photo-strip img,.portrait img{transition:none!important}
 }
+
+/* ─────────────────────────────────────────────────────────────
+   2026-10-02 スマホで右側が切れる不具合の修正（佐藤さん実機指摘）
+
+   原因: index-wall-draft.html のインラインstyleに
+         @media(max-width:560px){ .btn{min-width:0} } があるが、
+         後から読み込まれる本ファイル48行目の
+         .btn{min-width:170px}（メディアクエリ無し）が
+         ソース順で勝ち、スマホでも170pxの下限が残っていた。
+   影響: 2列ボタンの最小幅が 170+11+170=351px で固定され、
+         grid の 1fr トラックが351px未満に縮めなくなる。
+         画面幅351px未満で #access（店名・所在地・アクセス・電話・
+         定休日・地図・営業時間）とSNSボタンが画面外へ出て、
+         body{overflow-x:hidden} に切り落とされていた。
+   対策: スマホ幅で min-width の下限を外し、1fr を minmax(0,1fr)
+         にして必ず縮むようにする。文言・リンク・計測属性は変更しない。
+   ───────────────────────────────────────────────────────────── */
+@media(max-width:620px){
+  .btn{min-width:0}
+  .btn span:last-child{margin-left:8px}
+
+  /* 1fr は最小値が min-content。0まで縮むことを明示する */
+  .hero .actions,.hours .actions{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .final .actions{grid-template-columns:minmax(0,1fr)}
+  .actions{min-width:0}
+
+  .reason-grid,.story-grid,.menu-grid,.use-grid,.space-grid,
+  .access-grid,.faq-grid,.voice-grid{grid-template-columns:minmax(0,1fr)}
+  .row{grid-template-columns:minmax(0,85px) minmax(0,1fr)}
+  .hours-grid{grid-template-columns:minmax(0,70px) minmax(0,1fr)}
+
+  /* 装飾の擬似要素が21pxはみ出していた分を抑える */
+  .final:before{max-width:100%;overflow:hidden}
+}
+@media(max-width:390px){
+  .row{grid-template-columns:minmax(0,72px) minmax(0,1fr);gap:8px;font-size:15px}
+  .row b{font-size:15px}
+  .hours-grid{grid-template-columns:minmax(0,62px) minmax(0,1fr)}
+  .hours .btn,.insta .btn{font-size:13px;padding:10px 8px}
+  .btn span:last-child{margin-left:6px;font-size:16px}
+}
+
+/* 続き: 見出しと装飾文字のはみ出し ─────────────────────────────
+   .title の下限37pxでは「西大路駅南口から、」の9文字が321px必要。
+   word-break:auto-phrase で文節が割れないため、画面幅357px未満で
+   見出しが右に切れていた（#access のみ該当）。vw連動にして、
+   375px・390pxではほぼ今のままに保ちつつ小さい画面だけ縮める。 */
+@media(max-width:390px){
+  .title{font-size:clamp(30px,9.4vw,53px)}
+  .head{min-width:0}
+  .no{min-width:0;overflow:hidden;text-overflow:clip}
+}
+@media(max-width:620px){
+  /* 背景の「沼」260pxが右へ21px出て body の横幅を広げていた */
+  .final:before{font-size:180px;left:auto;right:0}
+}
