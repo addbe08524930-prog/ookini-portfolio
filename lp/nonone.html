@@ -1,0 +1,85 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>VEGAN RAMEN 野の音｜LP試作</title><meta name="description" content="植物性だけでつくるラーメン店「野の音」（架空の店）のLP試作。">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/nonone-hero.webp" fetchpriority="high">
+<link rel="stylesheet" href="common.css"><style>
+/* 野の音（架空の店）：生成り＋唐辛子の朱を1色。一点の個性＝アーチ型の写真枠（器の丸みに合わせる） */
+:root{--page:#faf7f1;--ink:#2f2b26;--sub:#6a6259;--line:rgba(47,43,38,.15);--accent:#b4532a;--green:#b4532a}
+.site-head{background:rgba(250,247,241,.86);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.brand{font-family:var(--serif);font-size:22px;letter-spacing:.2em;color:var(--ink);text-decoration:none}.brand small{font-family:inherit;font-size:10.5px;letter-spacing:.24em;color:var(--sub);margin-right:10px}
+.lang{display:flex;gap:8px;font-size:12.5px;letter-spacing:.06em;color:var(--sub)}.lang b{color:var(--accent);font-weight:600}
+.hero{background:#f2ece2;min-height:100vh;min-height:100svh;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);align-items:center;gap:clamp(24px,4vw,72px);padding:112px var(--gut) 56px}
+.hero-media{margin:0;justify-self:center;width:min(100%,520px);aspect-ratio:4/5.4;border-radius:999px 999px 6px 6px;overflow:hidden;background:#ece4d8;box-shadow:0 30px 60px -36px rgba(47,43,38,.45)}
+.js .hero-media{clip-path:inset(100% 0 0 0 round 999px 999px 6px 6px)}
+.js.go .hero-media{animation:arch 1.6s var(--ease) .1s both}
+@keyframes arch{to{clip-path:inset(0 0 0 0 round 999px 999px 6px 6px)}}
+.hero-media img{object-position:50% 62%}
+.hero .area{margin:0 0 22px;font-size:12.5px;letter-spacing:.2em;color:var(--sub)}
+.hero h1{margin:0;font-family:var(--serif);font-weight:500;font-size:clamp(38px,4.6vw,70px);line-height:1.5;letter-spacing:.04em}
+.hero h1 span{display:block}
+.hero-lead{margin:26px 0 0;color:var(--sub);max-width:28em}
+.hero-actions{display:flex;align-items:center;gap:16px 26px;flex-wrap:wrap;margin-top:34px}
+.button{border-radius:999px}
+.official{font-size:12.5px;letter-spacing:.1em;color:var(--sub)}
+.bowl{background:#f2ece2}
+.shop-sec .media{border-radius:6px 6px 999px 999px;aspect-ratio:4/4.6}
+.quote{background:#f3eee5}
+.visit-band{background:#f2ece2}
+@media(max-width:800px){
+  .brand{font-size:19px}
+  .hero{grid-template-columns:minmax(0,1fr);min-height:0;padding:92px 20px 52px;gap:30px}
+  .hero-media{order:-1;width:min(100%,330px)}
+  .hero h1{font-size:clamp(30px,8.6vw,40px)}
+}
+</style></head><body>
+<header class="site-head"><a class="brand" href="#top"><small>VEGAN RAMEN</small>野の音</a><nav aria-label="ページ内"><a href="#bowl">ラーメン</a><a href="#shop">お店のこと</a><a href="#visit">店舗情報</a></nav><span class="lang" aria-label="言語（試作）"><b>JP</b><span>/</span><span>EN</span><span>/</span><span>繁中</span></span></header>
+<main id="top">
+<section class="hero" aria-label="VEGAN RAMEN 野の音">
+  <div class="hero-copy">
+    <p class="area">植物性ラーメン ／ 京都</p>
+    <h1 class="jp"><span>野菜だけで、</span><span>ここまで。</span></h1>
+    <p class="hero-lead jp">肉も魚も、卵も使わない一杯。<br>それでも、最後のひと口まで満たされる。</p>
+    <div class="hero-actions"><a class="button" href="#news">席を予約する<i aria-hidden="true"></i></a><span class="official">日本語・English・繁體中文</span></div>
+  </div>
+  <figure class="hero-media"><img src="assets/nonone-hero.webp" alt="香草と大豆ミートをのせた、赤いスープの植物性ラーメン" width="1000" height="1350" fetchpriority="high"></figure>
+</section>
+
+<section class="section bowl" id="bowl">
+  <div class="sec-head"><p class="label reveal">一杯のこと</p><h2 class="sec-title jp reveal">植物だけで、<br>深く、満たす。</h2><p class="lead jp reveal">昆布、干し椎茸、焼いた玉ねぎ。<br>重ねて引いただしに、唐辛子と香草で輪郭を足します。</p></div>
+  <div class="signature">
+    <article class="sig reveal"><span class="no">だし</span><h3 class="jp">澄んだ野菜だし</h3><p class="jp">素材の輪郭を残しながら、最後まで飲める深さへ。</p></article>
+    <article class="sig reveal"><span class="no">具</span><h3 class="jp">植物性の食べ応え</h3><p class="jp">香ばしく焼いた大豆ミートと、たっぷりの香草。</p></article>
+    <article class="sig reveal"><span class="no">麺</span><h3 class="jp">スープを運ぶしなやかな麺</h3><p class="jp">通常麺とグルテンフリー対応を、わかりやすく案内します。</p></article>
+  </div>
+</section>
+
+<section class="section shop-sec" id="shop">
+  <div class="split">
+    <figure class="media reveal"><img src="assets/nonone-sweets.webp" alt="木の実の生地にレモンクリームと赤すぐりをのせたタルト" width="1600" height="700" loading="lazy"></figure>
+    <div class="copy"><p class="label reveal">お店のこと</p><h3 class="jp reveal">食べられないものがある人も、<br>同じ卓で。</h3><p class="jp reveal">ヴィーガンの方も、そうでない方も。<br>食後は、植物性の小さな甘いものを。<br>旅の途中の一杯にも、選びやすい店に。</p>
+      <ul class="facts reveal"><li><b>食材</b><span>動物性食材不使用</span></li><li><b>甘味</b><span>植物性のタルト・季節の甘味</span></li><li><b>表示</b><span>食制限とアレルゲンを明確に表示</span></li></ul></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="sec-head"><p class="label reveal">メニュー</p><h2 class="sec-title jp reveal">選べる、<br>三つの一杯。</h2></div>
+  <ul class="menu reveal">
+    <li><strong>朱の辛味噌<em>Spicy Red Miso Ramen</em></strong><span class="dots"></span><b>¥1,400</b></li>
+    <li><strong>焼き玉ねぎの醤油<em>Roasted Onion Shoyu Ramen</em></strong><span class="dots"></span><b>¥1,300</b></li>
+    <li><strong>柚子と昆布の塩<em>Yuzu Kombu Shio Ramen</em></strong><span class="dots"></span><b>¥1,200</b></li>
+  </ul>
+</section>
+
+<section class="quote"><blockquote class="jp reveal">野菜だけで、<br>ここまで。</blockquote><cite class="reveal">VEGAN RAMEN 野の音</cite></section>
+
+<section class="section visit-band" id="visit">
+  <div class="visit"><h2 class="jp reveal">京都<br>野の音</h2>
+    <dl class="info reveal"><dt>店名</dt><dd>VEGAN RAMEN 野の音</dd><dt>営業</dt><dd>11:30–15:00 ／ 17:30–21:00</dd><dt>場所</dt><dd>京都市内（試作のため架空）</dd><dt>表示</dt><dd>食制限・アレルゲンを日英中で表示</dd></dl></div>
+</section>
+
+<section class="final" id="news"><p class="label reveal" style="justify-content:center">ご予約</p><h2 class="jp reveal">今日の一杯を、<br>席をとって。</h2><a class="button reveal" href="#news">席を予約する<i aria-hidden="true"></i></a></section>
+</main>
+<a class="mobile-cta" href="#news">席を予約する</a>
+<footer><span>VEGAN RAMEN 野の音（架空の店）</span><span>Concept work / OOKINI.com</span></footer>
+<script src="motion.js"></script></body></html>
